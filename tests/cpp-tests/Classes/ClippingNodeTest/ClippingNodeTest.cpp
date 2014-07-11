@@ -145,11 +145,45 @@ std::string BasicTest::subtitle() const
 void BasicTest::setup()
 {
     auto s = Director::getInstance()->getWinSize();
-    
+
+    // auto shape = DrawNode::create();
+    // auto innerShape = DrawNode::create();
+
+    // static Vec2 triangle[4];
+    // static Vec2 rect[4];
+
+    // // triangle[0] = Vec2(-100, -100);
+    // // triangle[1] = Vec2(100, -100);
+    // // triangle[2] = Vec2(0, 100);
+    // triangle[0] = Vec2(-120, -80);
+    // triangle[1] = Vec2(120, -80);
+    // triangle[2] = Vec2(120, 80);
+    // triangle[3] = Vec2(-120,80);
+    // static Color4F red(1, 0, 0, 1);
+    // static Color4F green(0, 1, 0, 1);
+
+    // shape->drawPolygon(triangle, 4, green, 1, red);
+    // shape->setAnchorPoint(Vec2(0.5, 0.5));
+    // shape->setPosition(Vec2(240, 160));
+
+    // rect[0] = Vec2(50, 50);
+    // rect[1] = Vec2(60, 50);
+    // rect[2] = Vec2(60, 60);
+    // rect[3] = Vec2(50,60);
+    // innerShape->drawPolygon(rect, 4, red, 1, green);
+    // //shape->setAnchorPoint(Vec2(0.5, 0.5));
+    // innerShape->setPosition(Vec2(0, 0));
+    // shape->addChild(innerShape);
+    // innerShape->runAction(this->actionRotate()); 
+    // shape->runAction(this->actionRotate()); 
+    // this->addChild(shape);
     auto stencil = this->stencil();
     stencil->setTag( kTagStencilNode );
+    stencil->setAnchorPoint(Vec2(0.5,0.5));
     stencil->setPosition( Vec2(50, 50) );
-    
+    // auto anchp = stencil->getAnchorPoint();
+    // printf("anchorpoint:(%f,%f)",anchp.x,anchp.y);
+    //this->addChild(stencil);
     auto clipper = this->clipper();
     clipper->setTag( kTagClipperNode );
     clipper->setAnchorPoint(Vec2(0.5, 0.5));
@@ -180,9 +214,14 @@ DrawNode* BasicTest::shape()
     triangle[0] = Vec2(-100, -100);
     triangle[1] = Vec2(100, -100);
     triangle[2] = Vec2(0, 100);
+    // triangle[0] = Vec2(0, 0);
+    // triangle[1] = Vec2(200, 0);
+    // triangle[2] = Vec2(100, 200);
 
+    static Color4F red(1, 0, 0, 1);
     static Color4F green(0, 1, 0, 1);
-    shape->drawPolygon(triangle, 3, green, 0, green);
+
+    shape->drawPolygon(triangle, 3, green, 1, red);
     return shape;
 }
 
