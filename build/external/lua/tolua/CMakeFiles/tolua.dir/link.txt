@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../../lib/libtolua.a  CMakeFiles/tolua.dir/tolua_event.c.o CMakeFiles/tolua.dir/tolua_is.c.o CMakeFiles/tolua.dir/tolua_map.c.o CMakeFiles/tolua.dir/tolua_push.c.o CMakeFiles/tolua.dir/tolua_to.c.o
+/usr/bin/ranlib ../../../lib/libtolua.a

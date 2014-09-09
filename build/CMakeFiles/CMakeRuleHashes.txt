@@ -1,0 +1,9 @@
+# Hashes of file build rules.
+792c42de3fa84965471fc4594ae0f126 tests/cpp-empty-test/CMakeFiles/cpp-empty-test_CORE_PRE_BUILD
+792c42de3fa84965471fc4594ae0f126 tests/cpp-empty-test/CMakeFiles/cpp-empty-test_PRE_BUILD
+22e175bd29fb4139d892a9a9c44201b9 tests/cpp-tests/CMakeFiles/cpp-tests_CORE_PRE_BUILD
+22e175bd29fb4139d892a9a9c44201b9 tests/cpp-tests/CMakeFiles/cpp-tests_PRE_BUILD
+d805d45a8cfeba727f8c47c458bbe500 tests/lua-empty-test/project/CMakeFiles/lua-empty-test_CORE_PRE_BUILD
+d805d45a8cfeba727f8c47c458bbe500 tests/lua-empty-test/project/CMakeFiles/lua-empty-test_PRE_BUILD
+fbd14d96e6a57ca8da610fc1256f5e8d tests/lua-tests/project/CMakeFiles/lua-tests_CORE_PRE_BUILD
+fbd14d96e6a57ca8da610fc1256f5e8d tests/lua-tests/project/CMakeFiles/lua-tests_PRE_BUILD
