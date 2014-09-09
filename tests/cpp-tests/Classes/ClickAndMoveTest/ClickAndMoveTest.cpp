@@ -30,7 +30,7 @@ MainLayer::MainLayer()
     addChild(sprite, 0, kTagSprite);
     sprite->setPosition( Vec2(20,150) );
     
-    sprite->runAction( JumpTo::create(4, Vec2(300,48), 100, 4) );
+    sprite->runAction( JumpTo::create(1, Vec2(300,100), 100, 5) );
     
     layer->runAction( RepeatForever::create(
                                 Sequence::create(

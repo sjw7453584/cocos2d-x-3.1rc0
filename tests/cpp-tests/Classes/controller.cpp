@@ -126,11 +126,11 @@ TestController::TestController()
 : _beginPos(Vec2::ZERO)
 {
     // add close menu
-    auto closeItem = MenuItemImage::create(s_pathClose, s_pathCloseSelected, CC_CALLBACK_1(TestController::closeCallback, this) );
+    auto closeItem = MenuItemImage::create(s_pathClose, s_pathClose, CC_CALLBACK_1(TestController::closeCallback, this) );
     auto menu =Menu::create(closeItem, NULL);
-
+    // menu->ignoreAnchorPointForPosition(false);
     menu->setPosition( Vec2::ZERO );
-    closeItem->setPosition(Vec2( VisibleRect::right().x - 30, VisibleRect::top().y - 30));
+    closeItem->setPosition(Vec2( VisibleRect::right().x - 30 , VisibleRect::top().y - 30 ));
 
     // add menu items for tests
     TTFConfig ttfConfig("fonts/arial.ttf", 24);
@@ -143,7 +143,7 @@ TestController::TestController()
         _itemMenu->addChild(menuItem, i + 10000);
         menuItem->setPosition( Vec2( VisibleRect::center().x, (VisibleRect::top().y - (i + 1) * LINE_SPACE) ));
     }
-
+     // _itemMenu->ignoreAnchorPointForPosition(false);
     _itemMenu->setContentSize(Size(VisibleRect::getVisibleRect().size.width, (g_testCount + 1) * (LINE_SPACE)));
     _itemMenu->setPosition(s_tCurPos);
     addChild(_itemMenu);

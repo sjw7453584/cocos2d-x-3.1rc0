@@ -54,7 +54,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLView::create("Cpp Tests");
+        glview = GLView::createWithRect("Cpp Tests",Rect(0,0,960,640),1);
+        // glview = GLView::createWithFullScreen("Cpp Test");
         director->setOpenGLView(glview);
     }
 
@@ -63,7 +64,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     auto screenSize = glview->getFrameSize();
 
-    auto designSize = Size(480, 320);
+    auto designSize = Size(960, 640);
+    // auto designSize = Size(480, 320);
 
     auto fileUtils = FileUtils::getInstance();
     std::vector<std::string> searchPaths;
@@ -110,6 +112,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 #else
     glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::NO_BORDER);
 #endif
+    // glview->setViewPortInPoints(200,200,640,320);
 
     auto scene = Scene::create();
     auto layer = new TestController();
