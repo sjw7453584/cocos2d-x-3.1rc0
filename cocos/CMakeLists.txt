@@ -82,6 +82,7 @@ set(COCOS_LINK
   png
   pthread
   glfw3
+  Xcursor
   Xxf86vm.so
   Xi
   Xrandr
